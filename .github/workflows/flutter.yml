@@ -19,7 +19,7 @@ jobs:
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: "3.4.1"  # Met à jour cette ligne avec une version de Flutter compatible avec le SDK Dart >= 3.4.1 < 4.0.0
+          flutter-version: "3.22.1"  # Met à jour cette ligne avec une version de Flutter compatible avec le SDK Dart >= 3.4.1 < 4.0.0
 
       - name: Display directory structure
         run: ls -R  # Affiche la structure du répertoire pour le débogage
