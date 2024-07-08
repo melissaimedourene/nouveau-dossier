@@ -14,15 +14,12 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3  # Utilise la version compatible avec Node.js 16 ou 20
+        uses: actions/checkout@v3
 
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: "3.22.1"  # Met à jour cette ligne avec une version de Flutter compatible avec le SDK Dart >= 3.4.1 < 4.0.0
-
-      - name: Display directory structure
-        run: ls -R  # Affiche la structure du répertoire pour le débogage
+          flutter-version: "3.4.1" # Assurez-vous que c'est la version compatible avec votre projet
 
       - name: Install dependencies
         run: flutter pub get
@@ -36,7 +33,7 @@ jobs:
         run: flutter test --coverage
 
       - name: Upload test results
-        uses: actions/upload-artifact@v3  # Utilise la version compatible avec Node.js 16 ou 20
+        uses: actions/upload-artifact@v3
         with:
           name: test-results
           path: coverage/lcov.info
